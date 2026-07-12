@@ -1,0 +1,95 @@
+<resources>
+
+    <!-- Material 3 Dark Theme -->
+    <style name="AppTheme" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/md_theme_primary</item>
+        <item name="colorOnPrimary">@color/md_theme_on_primary</item>
+        <item name="colorPrimaryContainer">@color/md_theme_primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/md_theme_on_primary_container</item>
+        <item name="colorSecondary">@color/md_theme_secondary</item>
+        <item name="colorOnSecondary">@color/md_theme_on_secondary</item>
+        <item name="colorSecondaryContainer">@color/md_theme_secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/md_theme_on_secondary_container</item>
+        <item name="colorTertiary">@color/md_theme_tertiary</item>
+        <item name="colorOnTertiary">@color/md_theme_on_tertiary</item>
+        <item name="colorSurface">@color/md_theme_surface</item>
+        <item name="colorSurfaceDim">@color/md_theme_surface_dim</item>
+        <item name="colorSurfaceBright">@color/md_theme_surface_bright</item>
+        <item name="colorSurfaceContainerLowest">@color/md_theme_surface_container_lowest</item>
+        <item name="colorSurfaceContainerLow">@color/md_theme_surface_container_low</item>
+        <item name="colorSurfaceContainer">@color/md_theme_surface_container</item>
+        <item name="colorSurfaceContainerHigh">@color/md_theme_surface_container_high</item>
+        <item name="colorSurfaceContainerHighest">@color/md_theme_surface_container_highest</item>
+        <item name="colorOnSurface">@color/md_theme_on_surface</item>
+        <item name="colorOnSurfaceVariant">@color/md_theme_on_surface_variant</item>
+        <item name="colorOutline">@color/md_theme_outline</item>
+        <item name="colorOutlineVariant">@color/md_theme_outline_variant</item>
+        <item name="colorError">@color/md_theme_error</item>
+        <item name="android:colorBackground">@color/md_theme_surface</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="android:navigationBarColor">@color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <!-- Material 3 shape -->
+        <item name="shapeAppearanceSmallComponent">@style/Shape.Small</item>
+        <item name="shapeAppearanceMediumComponent">@style/Shape.Medium</item>
+        <item name="shapeAppearanceLargeComponent">@style/Shape.Large</item>
+    </style>
+
+    <style name="Launch_Theme" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="android:windowBackground">@color/md_theme_surface</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="android:navigationBarColor">@color/transparent</item>
+    </style>
+
+    <!-- Shape system -->
+    <style name="Shape.Small" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerSize">8dp</item>
+    </style>
+    <style name="Shape.Medium" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerSize">12dp</item>
+    </style>
+    <style name="Shape.Large" parent="ShapeAppearance.Material3.LargeComponent">
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <!-- Dialog styles -->
+    <style name="MyDialog" parent="ThemeOverlay.Material3.Dialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowAnimationStyle">@style/dialog_animation</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+    </style>
+
+    <style name="dialog_animation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/dialog_exit</item>
+    </style>
+
+    <style name="basedialog_style" parent="ThemeOverlay.Material3.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <!-- Tab text styles -->
+    <style name="TabTitleText" parent="TextAppearance.Material3.TitleSmall">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+    <style name="BottomNavText" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:textSize">13sp</item>
+        <item name="android:letterSpacing">0.03</item>
+    </style>
+
+</resources>

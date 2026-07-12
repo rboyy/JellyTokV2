@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="100dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="144dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:background="@color/md_theme_surface"
+            android:layout_alignParentBottom="true"/>
+
+        <com.bytedance.tiktok.view.CircleImageView
+            android:id="@+id/ivHead"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            app:es_shape_type="round"
+            android:layout_marginLeft="20dp"
+            android:scaleType="centerCrop"
+            android:layout_centerVertical="true"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tvAddfocus"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:minWidth="120dp"
+            android:text="关注"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginRight="4dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/rl_dropdown"
+            app:cornerRadius="20dp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_dropdown"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/shape_round_halfwhite"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@mipmap/ic_down_arrow" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/md_theme_surface"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:id="@+id/tvNickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JellyTok"
+            android:textColor="@color/md_theme_on_surface"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/md_theme_on_surface_variant"
+            android:text="Jellyfin 媒体服务器"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/md_theme_outline_variant"
+            android:layout_marginTop="12dp"/>
+
+        <TextView
+            android:id="@+id/tvSign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="你的私人影视库\n随时随地刷视频"
+            android:textColor="@color/md_theme_on_surface"
+            android:textSize="14sp"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginTop="15dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_round_halfwhite"
+                android:text="JellyTok"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:textSize="12sp"
+                android:textColor="@color/md_theme_on_surface_variant"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_round_halfwhite"
+                android:text="NAS"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:layout_marginLeft="8dp"
+                android:textSize="12sp"
+                android:textColor="@color/md_theme_on_surface_variant"/>
+        </LinearLayout>
+
+        <!-- Stats row with Material 3 style -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/tvGetLikeCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="14w"
+                android:textColor="@color/md_theme_on_surface"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 影片"
+                android:textColor="@color/md_theme_on_surface_variant"
+                android:textSize="14sp"/>
+
+            <LinearLayout
+                android:id="@+id/llFocus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvFocusCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="310"
+                    android:textColor="@color/md_theme_on_surface"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 收藏"
+                    android:textColor="@color/md_theme_on_surface_variant"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llFans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvFansCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="291w"
+                    android:textColor="@color/md_theme_on_surface"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 观看"
+                    android:textColor="@color/md_theme_on_surface_variant"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

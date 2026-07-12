@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    tools:context=".fragment.MainFragment">
+
+    <com.bytedance.tiktok.view.NoSwipeViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="56dp"/>
+
+    <!-- Top bar: translucent gradient for readability over video -->
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="0dp"
+        android:background="@drawable/bg_top_bar_gradient">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabTitle"
+            android:layout_width="180dp"
+            android:layout_height="48dp"
+            android:layout_centerInParent="true"
+            android:background="@color/transparent"
+            app:tabIndicatorColor="@color/md_theme_primary"
+            app:tabIndicatorHeight="3dp"
+            app:tabIndicatorFullWidth="false"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextColor="@color/md_theme_on_surface_variant"
+            app:tabTextAppearance="@style/TabTitleText"
+            app:tabRippleColor="@color/transparent" />
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@mipmap/iv_search"
+            android:scaleType="fitCenter"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:padding="2dp"
+            android:alpha="0.9" />
+    </RelativeLayout>
+
+    <!-- Bottom navigation bar: Material 3 surface container -->
+    <RelativeLayout
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabMainMenu"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/md_theme_surface_container"
+            app:tabIndicatorColor="@color/md_theme_primary"
+            app:tabIndicatorHeight="3dp"
+            app:tabIndicatorFullWidth="false"
+            app:tabSelectedTextColor="@color/md_theme_primary"
+            app:tabTextColor="@color/md_theme_on_surface_variant"
+            app:tabTextAppearance="@style/BottomNavText"
+            app:tabRippleColor="@color/md_theme_primary_container" />
+    </RelativeLayout>
+
+    <!-- Search overlay -->
+    <FrameLayout
+        android:id="@+id/search_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</RelativeLayout>
